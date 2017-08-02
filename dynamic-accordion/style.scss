@@ -1,0 +1,12 @@
+& {
+  .accordion-item {
+    border-radius: 2px;
+    background-color: $app-widget-bg;
+    border: solid 1px $app-border-primary;
+    margin-bottom: 5px;
+
+    .basic-heading {
+      cursor: pointer;
+    }
+  }
+}

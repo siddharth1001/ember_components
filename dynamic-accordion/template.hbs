@@ -1,0 +1,9 @@
+{{#each items as |listItem index|}}
+  {{#dynamic-accordion/accordion-item item=listItem
+    activeItems=activeItems index=index as |isExpanded| }}
+    {{yield listItem
+      (hash
+            trigger=(component 'dynamic-accordion/accordion-trigger' isExpanded=isExpanded click=(action 'toggleActiveItem' listItem))
+            content=(component 'dynamic-accordion/accordion-content' isExpanded=isExpanded index=index))}}
+  {{/dynamic-accordion/accordion-item}}
+{{/each}}
